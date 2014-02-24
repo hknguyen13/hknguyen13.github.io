@@ -1,0 +1,106 @@
+/* 	Reset Styling
+----------------------------------------------------------------------*/
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, img {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Scroll Bar
+----------------------------------------------------------------------*/
+::-webkit-scrollbar {
+background-color: rgba(120,120,120,0.2);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+
+body {
+-webkit-font-smoothing: antialiased;  //smooths out font jaggedness
+-webkit-overflow-scrolling: touch;  //adds ios momentum scrolling
+}
+
+/* Background Image
+----------------------------------------------------------------------*/
+.background_image {
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+/* Page Container
+------------------------------------------------------------*/
+.pageContainer {
+position: fixed;
+height: 100%;
+width: 100%;
+top: 0%;
+left: 0%;
+overflow: auto;
+}
+
+/*  Navbar
+----------------------------------------------------------------------*/
+#vert-nav-bar {
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0,0,0,0.5);
+    
+    #logo-nav {
+        margin-top: 5vh;
+    }
+    div:nth-child(2) {
+        margin-top: 11vh;
+    }
+    div {
+        margin: 7vh 5% 0 5%;
+        width: 90%;
+        height: 10%;
+    }
+    img {
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
