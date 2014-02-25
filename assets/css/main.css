@@ -40,7 +40,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+a {
+    text-decoration: none;
+}
 
 /* Scroll Bar
 ----------------------------------------------------------------------*/
@@ -52,6 +54,11 @@ background-color: rgba(120,120,120,0.2);
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,0.5);
   border-radius: 5px;
+}
+
+* {
+    -webkit-transition: color ease 0.2s;
+    font-family: 'Varela Round','Istok Web', sans-serif;
 }
 
 body {
@@ -82,9 +89,32 @@ overflow: auto;
 ----------------------------------------------------------------------*/
 #horiz-nav-bar {
     width: 100%;
-    height: 10vh;
+    height: 4em;
     background: rgba(24,150,146, 0.8);
     color: white;
     position: absolute;
     top: 0;
+}
+#horiz-nav-bar ul {
+    margin-left: 40px;
+    position: absolute;
+    bottom: 0;
+}
+#horiz-nav-bar li {
+    display: inline-block;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+#horiz-nav-bar a {
+    color: white;
+    padding: 10px;
+}
+#horiz-nav-bar a:hover {
+    color: yellow;
+}
+
+/* PageContainer
+--------------------------------------------*/
+#pageContainer {
+    margin-top: 4em;
 }
