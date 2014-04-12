@@ -60,7 +60,7 @@ var scene, camera, renderer;
 
 		loader.options.convertUpAxis = true;
 
-		loader.load( '/../models/dummy1.dae', function ( collada ) {
+		loader.load( '/assets/models/dummy1.dae', function ( collada ) {
 
 			var dae = collada.scene;
 
