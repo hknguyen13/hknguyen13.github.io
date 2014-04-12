@@ -100,18 +100,22 @@ var sky;
   	function changeSky() {
 
   		scene.remove(sky);
-  		var bColor, tColor;
+  		var bColor, tColor, exp;
 
   		if (!day) {
 
   			tColor = 0xFFFFFD;
   			bColor = 0xA6CBE6;
 
+  			exp = 0.7;
+
 			day = true;
 		} else {
 
 			tColor = 0xFA2720;
 			bColor = 0x421E22;
+
+			exp = 0.2;
 
 			day = false;
 		}
@@ -123,7 +127,7 @@ var sky;
 			topColor:      { type: "c", value: new THREE.Color( tColor ) },
 			bottomColor: { type: "c", value: new THREE.Color( bColor ) },
 			offset:         { type: "f", value: 100 },
-			exponent:     { type: "f", value: 0.7 }
+			exponent:     { type: "f", value: exp }
 		}
  
 		//skydome
