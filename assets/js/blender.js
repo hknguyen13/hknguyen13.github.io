@@ -11,6 +11,7 @@ var scene, camera, renderer;
       renderer.setSize(WIDTH, HEIGHT);
       document.body.appendChild(renderer.domElement);
 
+
       //setup camera
       camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 10000);
       camera.position.set(50,150,100);
@@ -24,8 +25,29 @@ var scene, camera, renderer;
         camera.updateProjectionMatrix();
       });
 
+
       //add orbit control functionality
       controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+
+	    //add skydome to scene
+	    var vertexShader = document.getElementById( 'vertexShader' ).textContent;
+		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
+		var uniforms = {
+			topColor:      { type: "c", value: new THREE.Color(0x000000) },
+			bottomColor: { type: "c", value: new THREE.Color( 0x262626 ) },
+			offset:         { type: "f", value: 100 },
+			exponent:     { type: "f", value: 0.7 }
+		}
+ 
+		//skydome
+		 
+		var skyGeo = new THREE.SphereGeometry( 2000, 32, 15 );
+		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
+		 
+		var sky = new THREE.Mesh( skyGeo, skyMat );
+		scene.add( sky );
+
 
       //add lights to the scene and spheres to help with positioning
 
@@ -34,7 +56,7 @@ var scene, camera, renderer;
 		light.position.set(-100,200,100);
 		scene.add(light);
 
-		var sphereSize = 1; 
+		var sphereSize = 2; 
 		var pointLightHelper = new THREE.PointLightHelper( light, sphereSize ); 
 		scene.add( pointLightHelper );
 
@@ -70,6 +92,7 @@ var scene, camera, renderer;
 			dae.scale.set(10.5,10.5,10.5);
 
 			scene.add(dae);
+
 
 			//axes and grid code
 			var axes = new THREE.AxisHelper(50);
