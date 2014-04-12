@@ -123,6 +123,10 @@ margin-top: 10em;
 
 /* Canvas'
 ----------------------------------------------*/
+#blender_proj canvas {
+    margin-top: 4em;
+    margin: auto;
+}
 #pageContainer > div {
     width: 500px;
     border: solid 1px black;

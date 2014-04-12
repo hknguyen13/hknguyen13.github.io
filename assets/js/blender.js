@@ -4,8 +4,8 @@ var scene, camera, renderer;
     function init() {
 
       scene = new THREE.Scene();
-      var WIDTH = window.innerWidth,
-          HEIGHT = window.innerHeight;
+      var WIDTH = (window.innerWidth*0.7),
+          HEIGHT = (window.innerHeight*0.7);
 
       renderer = new THREE.WebGLRenderer({antialias:true});
       renderer.setSize(WIDTH, HEIGHT);
