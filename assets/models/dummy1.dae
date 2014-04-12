@@ -5,15 +5,64 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.69.0 r60995</authoring_tool>
     </contributor>
-    <created>2014-04-12T13:03:28</created>
-    <modified>2014-04-12T13:03:28</modified>
+    <created>2014-04-12T13:07:21</created>
+    <modified>2014-04-12T13:07:21</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
-  <library_images/>
+  <library_images>
+    <image id="Obstical_Tex_png" name="Obstical_Tex_png">
+      <init_from>Obstical_Tex.png</init_from>
+    </image>
+    <image id="Obstical_Bump_png" name="Obstical_Bump_png">
+      <init_from>Obstical_Bump.png</init_from>
+    </image>
+    <image id="Obstical_Spec_png" name="Obstical_Spec_png">
+      <init_from>Obstical_Spec.png</init_from>
+    </image>
+    <image id="Frame_Tex_png" name="Frame_Tex_png">
+      <init_from>Frame_Tex.png</init_from>
+    </image>
+    <image id="Frame_Bump_png" name="Frame_Bump_png">
+      <init_from>Frame_Bump.png</init_from>
+    </image>
+    <image id="Frame_Spec_png" name="Frame_Spec_png">
+      <init_from>Frame_Spec.png</init_from>
+    </image>
+  </library_images>
   <library_effects>
     <effect id="Hindernis_Rampe-effect">
       <profile_COMMON>
+        <newparam sid="Obstical_Tex_png-surface">
+          <surface type="2D">
+            <init_from>Obstical_Tex_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Obstical_Tex_png-sampler">
+          <sampler2D>
+            <source>Obstical_Tex_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Obstical_Spec_png-surface">
+          <surface type="2D">
+            <init_from>Obstical_Spec_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Obstical_Spec_png-sampler">
+          <sampler2D>
+            <source>Obstical_Spec_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Obstical_Bump_png-surface">
+          <surface type="2D">
+            <init_from>Obstical_Bump_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Obstical_Bump_png-sampler">
+          <sampler2D>
+            <source>Obstical_Bump_png-surface</source>
+          </sampler2D>
+        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -23,10 +72,10 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.8 0.8 0.8 1</color>
+              <texture texture="Obstical_Tex_png-sampler" texcoord="bake_Hindernis_Rampe"/>
             </diffuse>
             <specular>
-              <color sid="specular">0.5 0.5 0.5 1</color>
+              <texture texture="Obstical_Spec_png-sampler" texcoord="bake_Hindernis_Rampe"/>
             </specular>
             <shininess>
               <float sid="shininess">50</float>
@@ -35,6 +84,13 @@
               <float sid="index_of_refraction">1</float>
             </index_of_refraction>
           </phong>
+          <extra>
+            <technique profile="FCOLLADA">
+              <bump>
+                <texture texture="Obstical_Bump_png-sampler" texcoord="bake_Hindernis_Rampe"/>
+              </bump>
+            </technique>
+          </extra>
         </technique>
         <extra>
           <technique profile="GOOGLEEARTH">
@@ -46,6 +102,36 @@
     </effect>
     <effect id="frame-effect">
       <profile_COMMON>
+        <newparam sid="Frame_Tex_png-surface">
+          <surface type="2D">
+            <init_from>Frame_Tex_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Frame_Tex_png-sampler">
+          <sampler2D>
+            <source>Frame_Tex_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Frame_Spec_png-surface">
+          <surface type="2D">
+            <init_from>Frame_Spec_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Frame_Spec_png-sampler">
+          <sampler2D>
+            <source>Frame_Spec_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="Frame_Bump_png-surface">
+          <surface type="2D">
+            <init_from>Frame_Bump_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Frame_Bump_png-sampler">
+          <sampler2D>
+            <source>Frame_Bump_png-surface</source>
+          </sampler2D>
+        </newparam>
         <technique sid="common">
           <phong>
             <emission>
@@ -55,10 +141,10 @@
               <color sid="ambient">0 0 0 1</color>
             </ambient>
             <diffuse>
-              <color sid="diffuse">0.8 0.8 0.8 1</color>
+              <texture texture="Frame_Tex_png-sampler" texcoord="Bake Rahmen_Boden_Spielfeld"/>
             </diffuse>
             <specular>
-              <color sid="specular">1 1 1 1</color>
+              <texture texture="Frame_Spec_png-sampler" texcoord="Bake Rahmen_Boden_Spielfeld"/>
             </specular>
             <shininess>
               <float sid="shininess">50</float>
@@ -67,6 +153,13 @@
               <float sid="index_of_refraction">1</float>
             </index_of_refraction>
           </phong>
+          <extra>
+            <technique profile="FCOLLADA">
+              <bump>
+                <texture texture="Frame_Bump_png-sampler" texcoord="Bake Rahmen_Boden_Spielfeld"/>
+              </bump>
+            </technique>
+          </extra>
         </technique>
         <extra>
           <technique profile="GOOGLEEARTH">
