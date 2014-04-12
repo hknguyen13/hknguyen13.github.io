@@ -1,7 +1,7 @@
 var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
-var day = true;
+var day = false;
 var sky;
 
     init();
@@ -110,8 +110,8 @@ var sky;
 			day = true;
 		} else {
 
-			tColor = 0x000000;
-			bColor = 0xA6CBE6;
+			tColor = 0xFA2720;
+			bColor = 0x421E22;
 
 			day = false;
 		}
