@@ -124,8 +124,7 @@ margin-top: 10em;
 /* Canvas'
 ----------------------------------------------*/
 #blender_proj canvas {
-    margin-top: 9em!important;
-    margin-left: 15%;
+    margin: 9em 0 4em 15%;
 }
 #pageContainer > div {
     width: 500px;
