@@ -115,7 +115,7 @@ var sky;
 			tColor = 0xFA2720;
 			bColor = 0x421E22;
 
-			exp = 0.2;
+			exp = 1.0;
 
 			day = false;
 		}
