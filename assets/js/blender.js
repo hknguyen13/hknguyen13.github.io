@@ -1,7 +1,6 @@
 var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
-var uniforms;
 
     init();
     animate();
@@ -37,7 +36,7 @@ var uniforms;
 	    //add skydome to scene
 	    var vertexShader = document.getElementById( 'vertexShader' ).textContent;
 		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-		uniforms = {
+		var uniforms = {
 			topColor:      { type: "c", value: new THREE.Color(0xFFFFFD) },
 			bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
 			offset:         { type: "f", value: 100 },
@@ -48,7 +47,7 @@ var uniforms;
 		
 		var skyGeo = new THREE.SphereGeometry( 2000, 32, 15 );
 		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
-		 
+		
 		var sky = new THREE.Mesh( skyGeo, skyMat );
 		scene.add( sky );
 
@@ -108,6 +107,10 @@ var uniforms;
 
 			addHelpers();
 		});
+  	}
+
+  	function changeSky() {
+  		sky.mesh.material.uniforms.bottomColor.value = new THREE.Color( 0x000000 );
   	}
 
   	function addHelpers() {

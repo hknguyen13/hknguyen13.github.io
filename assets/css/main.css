@@ -132,6 +132,9 @@ margin-top: 10em;
     background-color: rgba(0, 47, 131, 0.7);
     height: 150px;
     border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+    -moz-box-shadow: 2px 4px 5px #000;
+    -webkit-box-shadow: 2px 4px 5px #000;
 }
 #blender_proj .button_container button:hover {
     background-color: white;
