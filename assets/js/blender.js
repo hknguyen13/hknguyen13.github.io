@@ -107,7 +107,7 @@ var sky;
   			tColor = 0xFFFFFD;
   			bColor = 0xA6CBE6;
 
-  			exp = 0.8;
+  			exp = 0.75;
 
 			day = true;
 		} else {
