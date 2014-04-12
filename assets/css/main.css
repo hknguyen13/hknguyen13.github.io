@@ -76,13 +76,14 @@ background-position: center;
 
 /* Page Container
 ------------------------------------------------------------*/
-.pageContainer {
+#pageContainer {
 position: fixed;
 height: 100%;
 width: 100%;
 top: 0%;
 left: 0%;
 overflow: auto;
+margin-top: 10em;
 }
 
 /*  Navbar
@@ -113,8 +114,24 @@ overflow: auto;
     color: yellow;
 }
 
-/* PageContainer
+/* Buttons
 --------------------------------------------*/
-#pageContainer {
-    margin-top: 4em;
+.button_container {
+    display: inline-block;
+    width: 200px;
+}
+
+/* Canvas'
+----------------------------------------------*/
+#pageContainer > div {
+    width: 500px;
+    border: solid 1px black;
+    padding: 10px;   
+    margin: 10px;
+}
+#rotating_sq_section {
+    background-color: #3283A3;
+}
+#first-webGL {
+    background-color: #0D883E;
 }
