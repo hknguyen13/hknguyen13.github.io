@@ -58,8 +58,7 @@
 
     <div class="button_container">
         <button id="axes_grids">Toggle Axes and Grid</button>
-        <button id="day">Day</button>
-        <button id="night">Night</button>
+        <button id="day">Toggle Sky</button>
     </div>
 
     <script>
@@ -72,9 +71,8 @@
             }
         };
 
-        document.getElementById("night").onclick = function () {
+        document.getElementById("day").onclick = function () {
             changeSky();
-            console.log("clicked night button");
         };
     </script>
 </body>

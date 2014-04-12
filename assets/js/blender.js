@@ -1,6 +1,7 @@
 var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
+var day = true;
 var sky;
 
     init();
@@ -35,22 +36,7 @@ var sky;
 
 
 	    //add skydome to scene
-	    var vertexShader = document.getElementById( 'vertexShader' ).textContent;
-		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-		var uniforms = {
-			topColor:      { type: "c", value: new THREE.Color(0xFFFFFD) },
-			bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
-			offset:         { type: "f", value: 100 },
-			exponent:     { type: "f", value: 0.7 }
-		}
- 
-		//skydome
-		
-		var skyGeo = new THREE.SphereGeometry( 2000, 32, 15 );
-		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
-		
-		sky = new THREE.Mesh( skyGeo, skyMat );
-		scene.add( sky );
+	    changeSky();
 
 
       //add lights to the scene and spheres to help with positioning
@@ -110,14 +96,31 @@ var sky;
 		});
   	}
 
+
   	function changeSky() {
-  		//sky.mesh.ShaderMaterial.uniforms.bottomColor.value = new THREE.Color( 0x000000 );
+
   		scene.remove(sky);
-  		/*var vertexShader = document.getElementById( 'vertexShader' ).textContent;
+  		var bColor, tColor;
+
+  		if (day) {
+
+  			tColor = 0xFFFFFD;
+  			bColor = 0xA6CBE6;
+
+			day = true;
+		} else {
+
+			tColor = 0x000000;
+			bColor = 0xA6CBE6;
+
+			day = false;
+		}
+
+		var vertexShader = document.getElementById( 'vertexShader' ).textContent;
 		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
 		var uniforms = {
-			topColor:      { type: "c", value: new THREE.Color(0x000000) },
-			bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
+			topColor:      { type: "c", value: new THREE.Color( tColor ) },
+			bottomColor: { type: "c", value: new THREE.Color( bColor ) },
 			offset:         { type: "f", value: 100 },
 			exponent:     { type: "f", value: 0.7 }
 		}
@@ -128,7 +131,7 @@ var sky;
 		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
 		
 		sky = new THREE.Mesh( skyGeo, skyMat );
-		scene.add( sky );*/
+		scene.add( sky );
   	}
 
   	function addHelpers() {
