@@ -1,5 +1,7 @@
 var scene, camera, renderer;
 var axes, gridXZ;
+var axes_grids = false;
+
     init();
     animate();
     function init() {
@@ -105,16 +107,30 @@ var axes, gridXZ;
 
 			addHelpers();
 		});
+
+
+		// Initialize event handlers
+	    document.getElementById("axes_grids").onclick = function () {
+	        if (axes_grids) {
+	        	removeHelpers();
+	        } else {
+	        	addHelpers();
+	        }
+	    };
   	}
 
   	function addHelpers() {
   		scene.add(axes);
   		scene.add(gridXZ);
+
+  		axes_grids = true;
   	}
 
   	function removeHelpers() {
   		scene.remove(axes);
   		scene.remove(gridXZ);
+
+  		axes_grids = false;
   	}
 
   	//re-renders scene as camera rotates
