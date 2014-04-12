@@ -71,18 +71,16 @@ var scene, camera, renderer;
 
 			scene.add(dae);
 
+			//axes and grid code
+			var axes = new THREE.AxisHelper(50);
+			axes.position = dae.position;
+			scene.add(axes);
+
+			var gridXZ = new THREE.GridHelper(100, 10);
+			gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
+			gridXZ.position.set(0,0,0 );
+			scene.add(gridXZ);
 		});
-
-
-		//axes and grid code
-		var axes = new THREE.AxisHelper(50);
-		axes.position = dae.position;
-		scene.add(axes);
-
-		var gridXZ = new THREE.GridHelper(100, 10);
-		gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
-		gridXZ.position.set(0,0,0 );
-		scene.add(gridXZ);
   	}
 
   	//re-renders scene as camera rotates
