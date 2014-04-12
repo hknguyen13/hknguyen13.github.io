@@ -60,9 +60,10 @@ var scene, camera, renderer;
 
 		loader.options.convertUpAxis = true;
 
+		var dae
 		loader.load( '/assets/models/dummy1.dae', function ( collada ) {
 
-			var dae = collada.scene;
+			dae = collada.scene;
 
 			var skin = collada.skins[ 0 ];
 
