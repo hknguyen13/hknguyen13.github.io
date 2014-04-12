@@ -53,10 +53,21 @@
         }
     </script>
 
-    <button id="axes_grids">Toggle Axes and Grid</button>
 
     <script type="text/javascript" src="assets/js/blender.js"></script>
 
+    <button id="axes_grids">Toggle Axes and Grid</button>
+
+    <script>
+        // Initialize event handlers
+        document.getElementById("axes_grids").onclick = function () {
+            if (axes_grids) {
+                removeHelpers();
+            } else {
+                addHelpers();
+            }
+        };
+    </script>
 </body>
 <!--<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

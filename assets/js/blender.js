@@ -107,16 +107,6 @@ var axes_grids = false;
 
 			addHelpers();
 		});
-
-
-		// Initialize event handlers
-	    document.getElementById("axes_grids").onclick = function () {
-	        if (axes_grids) {
-	        	removeHelpers();
-	        } else {
-	        	addHelpers();
-	        }
-	    };
   	}
 
   	function addHelpers() {
