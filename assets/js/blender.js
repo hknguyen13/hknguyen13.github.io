@@ -111,7 +111,7 @@ var sky;
   	}
 
   	function changeSky() {
-  		sky.mesh.material.uniforms.bottomColor.value = new THREE.Color( 0x000000 );
+  		sky.mesh.ShaderMaterial.uniforms.bottomColor.value = new THREE.Color( 0x000000 );
   	}
 
   	function addHelpers() {
