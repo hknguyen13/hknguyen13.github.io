@@ -67,7 +67,7 @@ var scene, camera, renderer;
 			var skin = collada.skins[ 0 ];
 
 			dae.position.set(0,0,0); //x,z,y- if you think in blender dimensions ;)
-			dae.scale.set(1.5,1.5,1.5);
+			dae.scale.set(10.5,10.5,10.5);
 
 			scene.add(dae);
 
