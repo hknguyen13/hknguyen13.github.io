@@ -39,7 +39,37 @@ void main()
 </script>
 <!-- end rotating square ------------------>
 
+
+<!-- Blender Object ------>
+<script id="blend_vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+uniform float theta;
+
+void main()
+{
+    float s = sin( theta );
+    float c = cos( theta );
+
+    gl_Position.x = -s * vPosition.x + c * vPosition.y;
+    gl_Position.y =  s * vPosition.y + c * vPosition.x;
+    gl_Position.z = 0.0;
+    gl_Position.w = 1.0;
+}
+</script>
+
+<script id="blend_fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+void main()
+{
+    gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+}
+</script>
+<!-- end Blender Object ---->
+
 <script type="text/javascript" src="assets/js/rotatingSquare2.js"></script>
+<!-- <script type="text/javascript" src="assets/js/blender.js"></script> -->
 
 </head>
 
@@ -47,9 +77,10 @@ void main()
 <body>
     <div id="horiz-nav-bar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="#">About</a></li> -->
+            <!-- <li><a href="#">Contact</a></li> -->
+            <li><a href="blender_project.html">Project</a></li>
         </ul>
     </div>
 
@@ -84,5 +115,5 @@ void main()
 
   ga('create', 'UA-48448603-1', 'hknguyen13.github.io');
   ga('send', 'pageview');
-</script>
+</script>-->
 </html>
