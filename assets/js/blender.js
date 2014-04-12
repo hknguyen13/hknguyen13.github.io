@@ -100,34 +100,32 @@ var sky;
   	function changeSky() {
 
   		scene.remove(sky);
+  		var bColor, tColor;
 
+  		if (!day) {
 
-  		var vertexShader = document.getElementById( 'vertexShader' ).textContent;
-		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-
-  		if (day) {
-  			var uniforms = {
-				topColor:      { type: "c", value: new THREE.Color( 0xFFFFFD ) },
-				bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
-				offset:         { type: "f", value: 100 },
-				exponent:     { type: "f", value: 0.7 }
-			}
-			console.log("should be day");
+  			tColor = 0xFFFFFD;
+  			bColor = 0xA6CBE6;
 
 			day = true;
 		} else {
-			var uniforms = {
-				topColor:      { type: "c", value: new THREE.Color( 0x000000 ) },
-				bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
-				offset:         { type: "f", value: 100 },
-				exponent:     { type: "f", value: 0.7 }
-			}
-			console.log("should be NIGHT");
+
+			tColor = 0x000000;
+			bColor = 0xA6CBE6;
 
 			day = false;
-		}	
+		}
 
+		var vertexShader = document.getElementById( 'vertexShader' ).textContent;
+		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
 
+		var uniforms = {
+			topColor:      { type: "c", value: new THREE.Color( tColor ) },
+			bottomColor: { type: "c", value: new THREE.Color( bColor ) },
+			offset:         { type: "f", value: 100 },
+			exponent:     { type: "f", value: 0.7 }
+		}
+ 
 		//skydome
 		
 		var skyGeo = new THREE.SphereGeometry( 1000, 32, 15 );
