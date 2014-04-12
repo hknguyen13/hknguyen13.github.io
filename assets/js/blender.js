@@ -112,6 +112,7 @@ var sky;
 				offset:         { type: "f", value: 100 },
 				exponent:     { type: "f", value: 0.7 }
 			}
+			console.log("should be day");
 
 			day = true;
 		} else {
@@ -121,6 +122,7 @@ var sky;
 				offset:         { type: "f", value: 100 },
 				exponent:     { type: "f", value: 0.7 }
 			}
+			console.log("should be NIGHT");
 
 			day = false;
 		}	
