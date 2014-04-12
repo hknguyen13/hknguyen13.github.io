@@ -1,6 +1,7 @@
 var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
+var sky;
 
     init();
     animate();
@@ -48,7 +49,7 @@ var axes_grids = false;
 		var skyGeo = new THREE.SphereGeometry( 2000, 32, 15 );
 		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
 		
-		var sky = new THREE.Mesh( skyGeo, skyMat );
+		sky = new THREE.Mesh( skyGeo, skyMat );
 		scene.add( sky );
 
 
