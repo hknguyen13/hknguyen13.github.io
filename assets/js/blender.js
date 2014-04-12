@@ -34,14 +34,14 @@ var scene, camera, renderer;
 	    var vertexShader = document.getElementById( 'vertexShader' ).textContent;
 		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
 		var uniforms = {
-			topColor:      { type: "c", value: new THREE.Color(0x000000) },
-			bottomColor: { type: "c", value: new THREE.Color( 0x262626 ) },
+			topColor:      { type: "c", value: new THREE.Color(0xFFFFFD) },
+			bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
 			offset:         { type: "f", value: 100 },
 			exponent:     { type: "f", value: 0.7 }
 		}
  
 		//skydome
-		 
+		
 		var skyGeo = new THREE.SphereGeometry( 2000, 32, 15 );
 		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
 		 
