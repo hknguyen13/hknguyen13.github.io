@@ -123,7 +123,7 @@ var sky;
  
 		//skydome
 		
-		var skyGeo = new THREE.SphereGeometry( 2000, 32, 15 );
+		var skyGeo = new THREE.SphereGeometry( 1000, 32, 15 );
 		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
 		
 		sky = new THREE.Mesh( skyGeo, skyMat );
