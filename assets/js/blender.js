@@ -100,31 +100,32 @@ var sky;
   	function changeSky() {
 
   		scene.remove(sky);
-  		var bColor, tColor;
+
+
+  		var vertexShader = document.getElementById( 'vertexShader' ).textContent;
+		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
 
   		if (day) {
-
-  			tColor = 0xFFFFFD;
-  			bColor = 0xA6CBE6;
+  			var uniforms = {
+				topColor:      { type: "c", value: new THREE.Color( 0xFFFFFD ) },
+				bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
+				offset:         { type: "f", value: 100 },
+				exponent:     { type: "f", value: 0.7 }
+			}
 
 			day = true;
 		} else {
-
-			tColor = 0x000000;
-			bColor = 0xA6CBE6;
+			var uniforms = {
+				topColor:      { type: "c", value: new THREE.Color( 0x000000 ) },
+				bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
+				offset:         { type: "f", value: 100 },
+				exponent:     { type: "f", value: 0.7 }
+			}
 
 			day = false;
-		}
+		}	
 
-		var vertexShader = document.getElementById( 'vertexShader' ).textContent;
-		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-		var uniforms = {
-			topColor:      { type: "c", value: new THREE.Color( tColor ) },
-			bottomColor: { type: "c", value: new THREE.Color( bColor ) },
-			offset:         { type: "f", value: 100 },
-			exponent:     { type: "f", value: 0.7 }
-		}
- 
+
 		//skydome
 		
 		var skyGeo = new THREE.SphereGeometry( 1000, 32, 15 );
