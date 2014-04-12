@@ -66,6 +66,10 @@ body {
 -webkit-overflow-scrolling: touch;  //adds ios momentum scrolling
 }
 
+#blender_proj {
+    min-width: 1225px;
+}
+
 /* Background Image
 ----------------------------------------------------------------------*/
 .background_image {
@@ -120,11 +124,39 @@ margin-top: 10em;
     display: inline-block;
     width: 200px;
 }
+#blender_proj .button_container {
+    float: right;
+    margin-top: 12em;
+    margin-right: 2em;
+    width: 170px;
+    background-color: rgba(0, 47, 131, 0.7);
+    height: 150px;
+    border-radius: 10px;
+}
+#blender_proj .button_container button:hover {
+    background-color: white;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+#blender_proj .button_container button {
+    margin: 10px 7%;
+    width: 145px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(255, 255, 132);
+    border: 2px outset rgb(146, 146, 50);
+    cursor: pointer;
+    box-shadow: 0px 1px 5px #000;
+    -moz-box-shadow: 0px 1px 5px #000;
+    -webkit-box-shadow: 0px 1px 5px #000;
+}
 
 /* Canvas'
 ----------------------------------------------*/
 #blender_proj canvas {
     margin: 9em 0 4em 15%;
+    min-width: 857;
 }
 #pageContainer > div {
     width: 500px;

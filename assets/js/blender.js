@@ -1,6 +1,7 @@
 var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
+var uniforms;
 
     init();
     animate();
@@ -36,7 +37,7 @@ var axes_grids = false;
 	    //add skydome to scene
 	    var vertexShader = document.getElementById( 'vertexShader' ).textContent;
 		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
-		var uniforms = {
+		uniforms = {
 			topColor:      { type: "c", value: new THREE.Color(0xFFFFFD) },
 			bottomColor: { type: "c", value: new THREE.Color( 0xA6CBE6 ) },
 			offset:         { type: "f", value: 100 },
