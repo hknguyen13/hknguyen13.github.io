@@ -112,7 +112,8 @@ var sky;
 
   	function changeSky() {
   		//sky.mesh.ShaderMaterial.uniforms.bottomColor.value = new THREE.Color( 0x000000 );
-  		var vertexShader = document.getElementById( 'vertexShader' ).textContent;
+  		scene.remove(sky);
+  		/*var vertexShader = document.getElementById( 'vertexShader' ).textContent;
 		var fragmentShader = document.getElementById( 'fragmentShader' ).textContent;
 		var uniforms = {
 			topColor:      { type: "c", value: new THREE.Color(0x000000) },
@@ -127,7 +128,7 @@ var sky;
 		var skyMat = new THREE.ShaderMaterial( { vertexShader: vertexShader, fragmentShader: fragmentShader, uniforms: uniforms, side: THREE.BackSide } );
 		
 		sky = new THREE.Mesh( skyGeo, skyMat );
-		scene.add( sky );
+		scene.add( sky );*/
   	}
 
   	function addHelpers() {
