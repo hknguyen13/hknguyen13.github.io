@@ -160,6 +160,7 @@ margin-top: 10em;
 #blender_proj canvas {
     margin: 9em 0 4em 15%;
     min-width: 857;
+    max-width: 70%;
 }
 #pageContainer > div {
     width: 500px;
