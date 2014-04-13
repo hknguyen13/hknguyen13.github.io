@@ -107,6 +107,8 @@ var sky, light, light2, light3;
   			light = new THREE.PointLight(0xB90001, 0.7);
 			light.position.set(-100,200,100);
 			scene.add(light);
+
+			console.log("inside the light function");
   		}
   	}
 

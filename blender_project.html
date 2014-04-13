@@ -77,7 +77,10 @@
         };
 
         document.getElementById("light1").onclick = function () {
-            change_light();
+
+            var red = 0xB90001;
+
+            change_light(red, 1);
             console.log("light should be red");
         }
     </script>
