@@ -96,7 +96,6 @@ var sky;
 
 		load_model('/assets/models/chest.dae');
 		load_model('/assets/models/mouth.dae');
-		load_model('/assets/models/visor.dae');
   	}
 
 
