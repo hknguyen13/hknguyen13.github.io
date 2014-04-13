@@ -92,7 +92,7 @@ var sky;
 			gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
 			gridXZ.position.set(0,0,0 );
 
-			addHelpers();
+			//addHelpers();
 		});
   	}
 
