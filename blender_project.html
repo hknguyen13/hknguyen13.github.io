@@ -59,6 +59,7 @@
     <div class="button_container">
         <button id="axes_grids">Toggle Axes and Grid</button>
         <button id="day">Toggle Sky</button>
+        <button id="light1">Light 1</button>
     </div>
 
     <script>
@@ -74,6 +75,11 @@
         document.getElementById("day").onclick = function () {
             changeSky();
         };
+
+        document.getElementById("light1").onclick = function () {
+            change_light();
+            console.log("light should be red");
+        }
     </script>
 </body>
 <!--<script>

@@ -2,7 +2,7 @@ var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
 var day = false;
-var sky;
+var sky, light, light2, light3;
 
     init();
     animate();
@@ -42,7 +42,7 @@ var sky;
       //add lights to the scene and spheres to help with positioning
 
       	//light 1
-		var light = new THREE.PointLight(0xfffff3, 0.8);
+		light = new THREE.PointLight(0xfffff3, 0.8);
 		light.position.set(-100,200,100);
 		scene.add(light);
 
@@ -51,7 +51,7 @@ var sky;
 		scene.add( pointLightHelper );
 
 		//light 2
-		var light2 = new THREE.PointLight(0xd7f0ff, 0.7);
+		light2 = new THREE.PointLight(0xd7f0ff, 0.7);
 		light2.position.set(-150,40,0);
 		scene.add(light2);
 
@@ -59,7 +59,7 @@ var sky;
 		scene.add( pointLightHelper2 );
 
 		//light 3
-		var light3 = new THREE.PointLight(0xFFFFFF, 0.5);
+		light3 = new THREE.PointLight(0xFFFFFF, 0.5);
 		light3.position.set(150,200,-100);
 		scene.add(light3);
 
@@ -98,6 +98,17 @@ var sky;
 		load_model('/assets/models/mouth.dae');
   	}
 
+
+  	//change color of light
+  	function change_light(color, light_num) {
+  		if (light_num == 1) {
+  			scene.remove(light);
+
+  			light = new THREE.PointLight(0xB90001, 0.7);
+			light.position.set(-100,200,100);
+			scene.add(light);
+  		}
+  	}
 
   	//Collada loader function to bring in .dae model parts
   	function load_model( model_file ) {
