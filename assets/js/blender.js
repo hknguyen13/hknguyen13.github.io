@@ -95,9 +95,11 @@ var sky;
 		});
 
 		load_model('/assets/models/chest.dae');
+		load_model('/assets/models/mouth.dae');
   	}
 
 
+  	//Collada loader function to bring in .dae model parts
   	function load_model( model_file ) {
 
   		var loader = new THREE.ColladaLoader();
