@@ -59,7 +59,10 @@
     <div class="button_container">
         <button id="axes_grids">Toggle Axes and Grid</button>
         <button id="day">Toggle Sky</button>
-        <button id="light1">Light 1</button>
+        <button id="light1">Light</button>
+        <!--<h3>Light 1</h3>
+        <input id="light1" type="range"
+        min="0" max="10" step="1" value="0" />-->
     </div>
 
     <script>
@@ -76,11 +79,20 @@
             changeSky();
         };
 
-        document.getElementById("light1").onclick = function () {
+        document.getElementById("slider").onchange = function() {
 
-            var red = 0xB90001;
+            prim_color = event.srcElement.value;
+
+            var color = parseInt("0xB90001");
 
             change_light(red, 1);
+            console.log("light should be changing");
+        };
+        document.getElementById("light1").onclick = function () {
+
+            var color = parseInt("0xB90001");
+
+            change_light(color, 1);
             console.log("light should be red");
         }
     </script>
