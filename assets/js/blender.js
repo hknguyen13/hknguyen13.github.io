@@ -51,8 +51,8 @@ var sky;
 		scene.add( pointLightHelper );
 
 		//light 2
-		var light2 = new THREE.PointLight(0xd7f0ff, 0.2);
-		light2.position.set(-150,50,0);
+		var light2 = new THREE.PointLight(0xd7f0ff, 0.7);
+		light2.position.set(-150,40,0);
 		scene.add(light2);
 
 		var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize ); 
