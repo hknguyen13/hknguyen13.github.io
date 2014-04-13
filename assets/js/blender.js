@@ -72,7 +72,7 @@ var sky;
 
 		loader.options.convertUpAxis = true;
 
-		loader.load( '/assets/models/robot.dae', function ( collada ) {
+		loader.load( '/assets/models/web_robot.dae', function ( collada ) {
 
 			var dae = collada.scene;
 
