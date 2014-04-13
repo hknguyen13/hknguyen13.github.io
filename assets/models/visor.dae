@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.69.0 r60995</authoring_tool>
     </contributor>
-    <created>2014-04-13T18:23:04</created>
-    <modified>2014-04-13T18:23:04</modified>
+    <created>2014-04-13T18:24:31</created>
+    <modified>2014-04-13T18:24:31</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -131,7 +131,7 @@
   <library_visual_scenes>
     <visual_scene id="Scene" name="Scene">
       <node id="eye_visor" name="eye_visor" type="NODE">
-        <matrix sid="transform">-0.3438728 0 0 -0.6000235 0 0.5880498 0 0.04312361 0 0 0.3261815 3.276864 0 0 0 1</matrix>
+        <matrix sid="transform">-0.3438728 0 0 -2.534588 0 -0.5880498 4.17354e-7 0.04312361 0 -7.52419e-7 -0.3261815 3.276864 0 0 0 1</matrix>
         <instance_geometry url="#Cube_002-mesh">
           <bind_material>
             <technique_common>
