@@ -72,7 +72,7 @@ var sky;
 
 		loader.options.convertUpAxis = true;
 
-		loader.load( '/assets/models/web_robot.dae', function ( collada ) {
+  		loader.load( '/assets/models/web_robot.dae', function ( collada ) {
 
 			var dae = collada.scene;
 
@@ -82,7 +82,6 @@ var sky;
 			dae.scale.set(10.5,10.5,10.5);
 
 			scene.add(dae);
-
 
 			//axes and grid code
 			axes = new THREE.AxisHelper(50);
@@ -94,8 +93,24 @@ var sky;
 
 			//addHelpers();
 		});
+
+		load_model('/assets/models/chest.dae');
   	}
 
+
+  	function load_model( model_file ) {
+  		loader.load( model_file, function ( collada ) {
+
+			var dae = collada.scene;
+
+			var skin = collada.skins[ 0 ];
+
+			dae.position.set(0,0,0); //x,z,y- if you think in blender dimensions ;)
+			dae.scale.set(10.5,10.5,10.5);
+
+			scene.add(dae);
+		});
+  	}
 
   	function changeSky() {
 
