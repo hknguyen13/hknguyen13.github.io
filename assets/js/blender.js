@@ -99,6 +99,9 @@ var sky;
 
 
   	function load_model( model_file ) {
+
+  		var loader = new THREE.ColladaLoader();
+  		
   		loader.load( model_file, function ( collada ) {
 
 			var dae = collada.scene;
