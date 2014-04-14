@@ -72,6 +72,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		light4.position.set(-120,100,0);
 		scene.add(light4);
 
+		setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 4000);
 
 		//Collada loader script to bring in .dae model file
 		var loader = new THREE.ColladaLoader();
@@ -86,8 +87,6 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 			dae.scale.set(10.5,10.5,10.5);
 
 			scene.add(dae);
-
-			setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 5000);
 
 			//axes and grid code
 			axes = new THREE.AxisHelper(50);
