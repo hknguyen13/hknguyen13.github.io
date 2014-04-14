@@ -2,8 +2,8 @@ var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
 var day = false;
-var sky, light, light2, light3;
-var s_color = "0x0F0F0F";
+var sky, light, light2, light3, loader;
+var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 
     init();
     animate();
@@ -69,7 +69,7 @@ var s_color = "0x0F0F0F";
 
 
 		//Collada loader script to bring in .dae model file
-		var loader = new THREE.ColladaLoader();
+		loader = new THREE.ColladaLoader();
 
 		loader.options.convertUpAxis = true;
 
@@ -77,22 +77,18 @@ var s_color = "0x0F0F0F";
 
 			var dae = collada.scene;
 
-			//var skin = collada.skins[ 0 ];
-
 			dae.position.set(0,0,0); //x,z,y- if you think in blender dimensions ;)
 			dae.scale.set(10.5,10.5,10.5);
 
 			scene.add(dae);
 
 			//axes and grid code
-			/*axes = new THREE.AxisHelper(50);
+			axes = new THREE.AxisHelper(50);
 			axes.position = dae.position;
 
 			gridXZ = new THREE.GridHelper(100, 10);
 			gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
-			gridXZ.position.set(0,0,0 );*/
-
-			//addHelpers();
+			gridXZ.position.set(0,0,0 );
 		});
 
 		load_model('/assets/models/chest.dae');
@@ -135,8 +131,6 @@ var s_color = "0x0F0F0F";
   		loader.load( model_file, function ( collada ) {
 
 			var dae = collada.scene;
-
-			//var skin = collada.skins[ 0 ];
 
 			dae.position.set(0,0,0); //x,z,y- if you think in blender dimensions ;)
 			dae.scale.set(10.5,10.5,10.5);

@@ -221,14 +221,21 @@
         function slider_input(slider_value, color_index, light_num) {
 
             var prim_color = slider_value;
-            s_color = char_replace(s_color, color_index, prim_color);
 
-            console.log("s_color " + s_color);
+            if (light_num == 1) {
+                s_color = char_replace(s_color, color_index, prim_color);
+                color_string = s_color;
+            } else if (light_num == 2) {
+                s_color2 = char_replace(s_color2, color_index, prim_color);
+                color_string = s_color2;
+            } else {
+                s_color3 = char_replace(s_color3, color_index, prim_color);
+                color_string = s_color3;
+            }
 
-            var color = parseInt(s_color);
+            var color = parseInt(color_string);
 
             change_light(color, light_num);
-            console.log("light should be " + color);
         }
     </script>
 </body>
