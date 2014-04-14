@@ -194,3 +194,42 @@ var sky, light, light2, light3;
       renderer.render(scene, camera);
       controls.update();
     }
+
+    //parse slider value
+    function slider_to_hex(num) {
+
+    	var hex = num;
+
+    	console.log("num: " + hex);
+
+    	if ( (num >= 0) && (num <= 9) ) {
+    		hex = num.toString();
+
+    		console.log("num to string: " + hex);
+    	} else {
+    		switch (num) {
+    			case "10":
+    				hex = "A";
+    				break;
+    			case "11":
+    				hex = "B";
+    				break;
+    			case "12":
+    				hex = "C";
+    				break;
+    			case "13":
+    				hex = "D";
+    				break;
+    			case "14":
+    				hex = "E";
+    				break;
+    			case "15":
+    				hex = "F";
+    				break;
+    		}
+
+    		console.log("num to letter: " + hex);
+    	}
+
+    	return hex;
+    }

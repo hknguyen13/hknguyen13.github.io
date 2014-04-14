@@ -59,10 +59,10 @@
     <div class="button_container">
         <button id="axes_grids">Toggle Axes and Grid</button>
         <button id="day">Toggle Sky</button>
-        <button id="light1">Light</button>
-        <!--<h3>Light 1</h3>
+        <!-- <button id="light1">Light</button> -->
+        <h3>Light 1</h3>
         <input id="light1" type="range"
-        min="0" max="10" step="1" value="0" />-->
+        min="0" max="15" step="1" value="0" />
     </div>
 
     <script>
@@ -79,22 +79,30 @@
             changeSky();
         };
 
-        /*document.getElementById("slider").onchange = function() {
+        //update lights on slide and click release from user
+        document.getElementById("light1").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
 
-            prim_color = event.srcElement.value;
+            slider_input(slider_value);
+        };
+        document.getElementById("light1").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
 
-            var color = parseInt("0xB90001");
+            slider_input(slider_value);
+        };
 
-            change_light(red, 1);
-            console.log("light should be changing");
-        };*/
-        document.getElementById("light1").onclick = function () {
+        function slider_input(slider_value) {
 
-            var color = parseInt("0xB90001");
+            var prim_color = slider_value;
+            var s_color = "0x"+prim_color+"90000";
+
+            console.log("s_color " + s_color);
+
+            var color = parseInt(s_color);
 
             change_light(color, 1);
-            console.log("light should be red");
-        };
+            console.log("light should be " + color);
+        }
     </script>
 </body>
 <!--<script>
