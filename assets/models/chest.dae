@@ -5,8 +5,8 @@
       <author>Blender User</author>
       <authoring_tool>Blender 2.69.0 r60995</authoring_tool>
     </contributor>
-    <created>2014-04-13T18:07:36</created>
-    <modified>2014-04-13T18:07:36</modified>
+    <created>2014-04-13T21:29:56</created>
+    <modified>2014-04-13T21:29:56</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -72,7 +72,7 @@
               <texture texture="bender_chest_png-sampler" texcoord="UVMap"/>
             </diffuse>
             <specular>
-              <color sid="specular">0.8742138 0.8742138 0.8742138 1</color>
+              <color sid="specular">0.7444841 0.7444841 0.7444841 1</color>
             </specular>
             <shininess>
               <float sid="shininess">10</float>
