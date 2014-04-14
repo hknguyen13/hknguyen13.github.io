@@ -87,9 +87,6 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 
 			scene.add(dae);
 
-			setTimeout(function() { load_model('/assets/models/chest.dae'); }, 9000);
-			setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 5000);
-
 			//axes and grid code
 			axes = new THREE.AxisHelper(50);
 			axes.position = dae.position;
