@@ -93,10 +93,16 @@
     <div class="button_container">
         <button id="axes_grids">Toggle Axes and Grid</button>
         <button id="day">Toggle Sky</button>
+        <button id="party">Celebrate</button>
     </div>
+
+    <audio id="music" src="assets/music/celebration_kool_and_the_gang.mp3">
+    </audio>
 
     <script>
         // Initialize event handlers
+
+        //toggle axes and grid
         document.getElementById("axes_grids").onclick = function () {
             if (axes_grids) {
                 removeHelpers();
@@ -104,11 +110,14 @@
                 addHelpers();
             }
         };
-
+        //toggle sky background
         document.getElementById("day").onclick = function () {
             changeSky();
         };
-
+        //toggle party effects
+        document.getElementById("party").onclick = function () {
+            $("#music").play();
+        };
 
         //update lights on slide and click release from user
 
