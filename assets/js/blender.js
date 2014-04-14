@@ -104,7 +104,7 @@ var sky, light, light2, light3;
   		if (light_num == 1) {
   			scene.remove(light);
 
-  			light = new THREE.PointLight(0xB90001, 0.7);
+  			light = new THREE.PointLight(color, 0.7);
 			light.position.set(-100,200,100);
 			scene.add(light);
 
