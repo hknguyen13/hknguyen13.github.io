@@ -2,7 +2,7 @@ var scene, camera, renderer;
 var axes, gridXZ;
 var axes_grids = false;
 var day = false;
-var sky, light, light2, light3, loader;
+var sky, light, light2, light3;
 var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 
     init();
@@ -73,11 +73,8 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		scene.add(light4);
 
 
-		setTimeout(function() { load_model('/assets/models/chest.dae'); }, 9000);
-		setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 5000);
-
 		//Collada loader script to bring in .dae model file
-		loader = new THREE.ColladaLoader();
+		var loader = new THREE.ColladaLoader();
 
 		loader.options.convertUpAxis = true;
 
@@ -89,6 +86,9 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 			dae.scale.set(10.5,10.5,10.5);
 
 			scene.add(dae);
+
+			setTimeout(function() { load_model('/assets/models/chest.dae'); }, 9000);
+			setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 5000);
 
 			//axes and grid code
 			axes = new THREE.AxisHelper(50);
