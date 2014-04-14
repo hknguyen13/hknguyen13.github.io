@@ -207,12 +207,8 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 
     	var hex = num;
 
-    	console.log("num: " + hex);
-
     	if ( (num >= 0) && (num <= 9) ) {
     		hex = num.toString();
-
-    		console.log("num to string: " + hex);
     	} else {
     		switch (num) {
     			case "10":
@@ -234,8 +230,6 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     				hex = "F";
     				break;
     		}
-
-    		console.log("num to letter: " + hex);
     	}
 
     	return hex;
