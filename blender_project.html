@@ -61,7 +61,14 @@
         <button id="day">Toggle Sky</button>
 
         <h3>Light 1</h3>
-        <input id="light1" type="range"
+        <h4>Red</h4>
+        <input id="light1r" type="range"
+        min="0" max="15" step="1" value="0" />
+        <h4>Green</h4>
+        <input id="light1g" type="range"
+        min="0" max="15" step="1" value="0" />
+        <h4>Blue</h4>
+        <input id="light1b" type="range"
         min="0" max="15" step="1" value="0" />
     </div>
 
@@ -79,22 +86,49 @@
             changeSky();
         };
 
+
         //update lights on slide and click release from user
-        document.getElementById("light1").oninput = function() {
+
+        //LIGHT 1
+        //red
+        document.getElementById("light1r").oninput = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value);
+            slider_input(slider_value, 2);
         };
-        document.getElementById("light1").onchange = function() {
+        document.getElementById("light1r").onchange = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value);
+            slider_input(slider_value, 2);
+        };
+        //green
+        document.getElementById("light1g").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 4);
+        };
+        document.getElementById("light1g").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 4);
+        };
+        //blue
+        document.getElementById("light1b").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 6);
+        };
+        document.getElementById("light1b").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 6);
         };
 
-        function slider_input(slider_value) {
+
+        function slider_input(slider_value, color_index) {
 
             var prim_color = slider_value;
-            var s_color = "0x"+prim_color+"90000";
+            s_color = char_replace(s_color, color_index, prim_color);
 
             console.log("s_color " + s_color);
 

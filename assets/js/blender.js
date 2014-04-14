@@ -3,6 +3,7 @@ var axes, gridXZ;
 var axes_grids = false;
 var day = false;
 var sky, light, light2, light3;
+var s_color = "0x0F0F0F";
 
     init();
     animate();
@@ -232,4 +233,9 @@ var sky, light, light2, light3;
     	}
 
     	return hex;
+    }
+
+    //function to replace target char in string
+    function char_replace (s, index, character) {
+        return (s.substr(0, index) + character + s.substr(index+character.length));
     }

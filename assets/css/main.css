@@ -156,6 +156,27 @@ margin-top: 10em;
 }
 #blender_proj .button_container h3 {
     margin: 10px 7%;
+    color: white;
+}
+#blender_proj .button_container h4 {
+    margin: 10px 7%;
+    color: white;
+}
+#blender_proj .button_container input {
+    margin: 0 7%;
+}
+.button_container input[type='range'] {
+    -webkit-appearance: none !important;
+    background: #FFFF84;
+    height: 6px;
+    border-radius: 5px;
+}
+.button_container input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #00F5FF;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
 }
 
 /* Canvas'
