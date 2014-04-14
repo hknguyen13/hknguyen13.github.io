@@ -245,14 +245,17 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     //create party lights
     var tmp_light;
     function party_lights() {
+
+    	console.log("where's the party?");
     	var tmp, party_color = "0x000000";
 
     	scene.remove(tmp_light);
 
     	for (var i=0; i<6; i++) {
-    		tmp = Math.floor( (Math.random()*10)+6 );
+    		tmp = (Math.floor( (Math.random()*10)+6 )).toString();
     		tmp = slider_to_hex(tmp);
-    		party_color = char_replace(party_color, i+2, tmp);
+
+    		party_color = char_replace(party_color, (i+2), tmp);
     	}
 
 		tmp_light = new THREE.PointLight(party_color, 0.7);

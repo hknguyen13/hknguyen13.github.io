@@ -120,8 +120,8 @@
         var p_light;
         document.getElementById("party").onclick = function () {
             if (!music) {
-                document.getElementById("music").play();
-                p_light = setInterval(party_lights(), 500);
+                //document.getElementById("music").play();
+                p_light = setInterval( function() { party_lights(); }, 200 );
                 music = true;
             } else {
                 document.getElementById("music").pause();
