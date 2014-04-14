@@ -73,6 +73,9 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		scene.add(light4);
 
 
+		setTimeout(function() { load_model('/assets/models/chest.dae'); }, 9000);
+		setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 5000);
+
 		//Collada loader script to bring in .dae model file
 		loader = new THREE.ColladaLoader();
 
@@ -95,9 +98,6 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 			gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
 			gridXZ.position.set(0,0,0 );
 		});
-
-		setTimeout(function() { load_model('/assets/models/chest.dae'); }, 8000);
-		setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 3000);
   	}
 
 
