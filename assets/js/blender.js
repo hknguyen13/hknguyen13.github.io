@@ -96,7 +96,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 			gridXZ.position.set(0,0,0 );
 		});
 
-		setTimeout(function() { load_model('/assets/models/chest.dae'); }, 10000);
+		setTimeout(function() { load_model('/assets/models/chest.dae'); }, 8000);
 		setTimeout(function() { load_model('/assets/models/mouth.dae'); }, 3000);
   	}
 
