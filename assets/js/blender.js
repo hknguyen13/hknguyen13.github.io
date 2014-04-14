@@ -71,9 +71,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		var light4 = new THREE.PointLight(0xFFFFFF, 0.5);
 		light4.position.set(-120,100,0);
 		scene.add(light4);
-
-		//load_model('/assets/models/mouth.dae');
-		var mouth = '/assets/models/mouth.dae';
+		
 
 		//Collada loader script to bring in .dae model file
 		var loader = new THREE.ColladaLoader();
@@ -96,8 +94,6 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 			gridXZ = new THREE.GridHelper(100, 10);
 			gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
 			gridXZ.position.set(0,0,0 );
-
-			callback(mouth);
 		});
   	}
 
