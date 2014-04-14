@@ -180,6 +180,9 @@ margin-top: 10em;
     background: #FFFF84;
     height: 6px;
     border-radius: 5px;
+    box-shadow: 2px 1px 5px #000;
+    -moz-box-shadow: 2px 1px 5px #000;
+    -webkit-box-shadow: 2px 1px 5px #000;
 }
 .button_container input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none !important;
@@ -187,6 +190,9 @@ margin-top: 10em;
     height: 15px;
     width: 15px;
     border-radius: 100%;
+    box-shadow: 2px 2px 5px #000;
+    -moz-box-shadow: 2px 2px 5px #000;
+    -webkit-box-shadow: 2px 2px 5px #000;
 }
 
 /* Canvas'

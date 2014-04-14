@@ -77,7 +77,7 @@ var s_color = "0x0F0F0F";
 
 			var dae = collada.scene;
 
-			var skin = collada.skins[ 0 ];
+			//var skin = collada.skins[ 0 ];
 
 			dae.position.set(0,0,0); //x,z,y- if you think in blender dimensions ;)
 			dae.scale.set(10.5,10.5,10.5);
@@ -136,7 +136,7 @@ var s_color = "0x0F0F0F";
 
 			var dae = collada.scene;
 
-			var skin = collada.skins[ 0 ];
+			//var skin = collada.skins[ 0 ];
 
 			dae.position.set(0,0,0); //x,z,y- if you think in blender dimensions ;)
 			dae.scale.set(10.5,10.5,10.5);
