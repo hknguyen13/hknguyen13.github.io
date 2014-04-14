@@ -67,6 +67,11 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		var pointLightHelper3 = new THREE.PointLightHelper( light3, sphereSize ); 
 		scene.add( pointLightHelper3 );
 
+		//light 4 (constant sunlight)
+		var light4 = new THREE.PointLight(0xFFFFFF, 0.5);
+		light4.position.set(-120,100,0);
+		scene.add(light4);
+
 
 		//Collada loader script to bring in .dae model file
 		loader = new THREE.ColladaLoader();
