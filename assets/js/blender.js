@@ -108,8 +108,20 @@ var s_color = "0x0F0F0F";
   			light = new THREE.PointLight(color, 0.7);
 			light.position.set(-100,200,100);
 			scene.add(light);
+  		}
+  		if (light_num == 2) {
+  			scene.remove(light2);
 
-			console.log("inside the light function");
+  			light2 = new THREE.PointLight(color, 0.6);
+			light2.position.set(-150,40,0);
+			scene.add(light2);
+  		}
+  		if (light_num == 3) {
+  			scene.remove(light3);
+
+  			light3 = new THREE.PointLight(color, 0.5);
+			light3.position.set(150,200,-100);
+			scene.add(light3);
   		}
   	}
 

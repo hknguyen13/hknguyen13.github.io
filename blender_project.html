@@ -53,13 +53,7 @@
         }
     </script>
 
-
-    <script type="text/javascript" src="assets/js/blender.js"></script>
-
-    <div class="button_container">
-        <button id="axes_grids">Toggle Axes and Grid</button>
-        <button id="day">Toggle Sky</button>
-
+    <div class="button_container" id="sliders">
         <h3>Light 1</h3>
         <h4>Red</h4>
         <input id="light1r" type="range"
@@ -70,6 +64,35 @@
         <h4>Blue</h4>
         <input id="light1b" type="range"
         min="0" max="15" step="1" value="0" />
+
+        <h3>Light 2</h3>
+        <h4>Red</h4>
+        <input id="light2r" type="range"
+        min="0" max="15" step="1" value="0" />
+        <h4>Green</h4>
+        <input id="light2g" type="range"
+        min="0" max="15" step="1" value="0" />
+        <h4>Blue</h4>
+        <input id="light2b" type="range"
+        min="0" max="15" step="1" value="0" />
+
+        <h3>Light 3</h3>
+        <h4>Red</h4>
+        <input id="light3r" type="range"
+        min="0" max="15" step="1" value="0" />
+        <h4>Green</h4>
+        <input id="light3g" type="range"
+        min="0" max="15" step="1" value="0" />
+        <h4>Blue</h4>
+        <input id="light3b" type="range"
+        min="0" max="15" step="1" value="0" />
+    </div>
+
+    <script type="text/javascript" src="assets/js/blender.js"></script>
+
+    <div class="button_container">
+        <button id="axes_grids">Toggle Axes and Grid</button>
+        <button id="day">Toggle Sky</button>
     </div>
 
     <script>
@@ -94,38 +117,108 @@
         document.getElementById("light1r").oninput = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value, 2);
+            slider_input(slider_value, 2, 1);
         };
         document.getElementById("light1r").onchange = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value, 2);
+            slider_input(slider_value, 2, 1);
         };
         //green
         document.getElementById("light1g").oninput = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value, 4);
+            slider_input(slider_value, 4, 1);
         };
         document.getElementById("light1g").onchange = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value, 4);
+            slider_input(slider_value, 4, 1);
         };
         //blue
         document.getElementById("light1b").oninput = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value, 6);
+            slider_input(slider_value, 6, 1);
         };
         document.getElementById("light1b").onchange = function() {
             var slider_value = slider_to_hex(event.srcElement.value);
 
-            slider_input(slider_value, 6);
+            slider_input(slider_value, 6, 1);
+        };
+
+        ///// LIGHT 2 ////////
+        //red
+        document.getElementById("light2r").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 2, 2);
+        };
+        document.getElementById("light2r").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 2, 2);
+        };
+        //green
+        document.getElementById("light2g").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 4, 2);
+        };
+        document.getElementById("light2g").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 4, 2);
+        };
+        //blue
+        document.getElementById("light2b").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 6, 2);
+        };
+        document.getElementById("light2b").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 6, 2);
+        };
+
+        ////// LIGHT 3 //////
+        //red
+        document.getElementById("light3r").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 2, 3);
+        };
+        document.getElementById("light3r").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 2, 3);
+        };
+        //green
+        document.getElementById("light3g").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 4, 3);
+        };
+        document.getElementById("light3g").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 4, 3);
+        };
+        //blue
+        document.getElementById("light3b").oninput = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 6, 3);
+        };
+        document.getElementById("light3b").onchange = function() {
+            var slider_value = slider_to_hex(event.srcElement.value);
+
+            slider_input(slider_value, 6, 3);
         };
 
 
-        function slider_input(slider_value, color_index) {
+        function slider_input(slider_value, color_index, light_num) {
 
             var prim_color = slider_value;
             s_color = char_replace(s_color, color_index, prim_color);
@@ -134,7 +227,7 @@
 
             var color = parseInt(s_color);
 
-            change_light(color, 1);
+            change_light(color, light_num);
             console.log("light should be " + color);
         }
     </script>
