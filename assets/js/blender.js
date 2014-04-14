@@ -72,7 +72,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		light4.position.set(-120,100,0);
 		scene.add(light4);
 
-		load_model('/assets/models/mouth.dae');
+		//load_model('/assets/models/mouth.dae');
 
 		//Collada loader script to bring in .dae model file
 		var loader = new THREE.ColladaLoader();
