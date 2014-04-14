@@ -43,7 +43,7 @@ var s_color = "0x0F0F0F";
       //add lights to the scene and spheres to help with positioning
 
       	//light 1
-		/*light = new THREE.PointLight(0xfffff3, 0.8);
+		light = new THREE.PointLight(0xfffff3, 0.8);
 		light.position.set(-100,200,100);
 		scene.add(light);
 
@@ -65,7 +65,7 @@ var s_color = "0x0F0F0F";
 		scene.add(light3);
 
 		var pointLightHelper3 = new THREE.PointLightHelper( light3, sphereSize ); 
-		scene.add( pointLightHelper3 );*/
+		scene.add( pointLightHelper3 );
 
 
 		//Collada loader script to bring in .dae model file
