@@ -53,7 +53,7 @@ var s_color = "0x0F0F0F";
 
 		//light 2
 		light2 = new THREE.PointLight(0xd7f0ff, 0.7);
-		light2.position.set(-150,70,0);
+		light2.position.set(-250,40,0);
 		scene.add(light2);
 
 		var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize ); 
@@ -113,7 +113,7 @@ var s_color = "0x0F0F0F";
   			scene.remove(light2);
 
   			light2 = new THREE.PointLight(color, 0.6);
-			light2.position.set(-150,70,0);
+			light2.position.set(-250,40,0);
 			scene.add(light2);
   		}
   		if (light_num == 3) {
