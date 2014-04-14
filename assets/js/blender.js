@@ -43,7 +43,7 @@ var s_color = "0x0F0F0F";
       //add lights to the scene and spheres to help with positioning
 
       	//light 1
-		light = new THREE.PointLight(0xfffff3, 0.8);
+		/*light = new THREE.PointLight(0xfffff3, 0.8);
 		light.position.set(-100,200,100);
 		scene.add(light);
 
@@ -53,7 +53,7 @@ var s_color = "0x0F0F0F";
 
 		//light 2
 		light2 = new THREE.PointLight(0xd7f0ff, 0.7);
-		light2.position.set(-150,40,0);
+		light2.position.set(-150,70,0);
 		scene.add(light2);
 
 		var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize ); 
@@ -65,7 +65,7 @@ var s_color = "0x0F0F0F";
 		scene.add(light3);
 
 		var pointLightHelper3 = new THREE.PointLightHelper( light3, sphereSize ); 
-		scene.add( pointLightHelper3 );
+		scene.add( pointLightHelper3 );*/
 
 
 		//Collada loader script to bring in .dae model file
@@ -113,7 +113,7 @@ var s_color = "0x0F0F0F";
   			scene.remove(light2);
 
   			light2 = new THREE.PointLight(color, 0.6);
-			light2.position.set(-150,40,0);
+			light2.position.set(-150,70,0);
 			scene.add(light2);
   		}
   		if (light_num == 3) {
@@ -160,8 +160,8 @@ var s_color = "0x0F0F0F";
 			day = true;
 		} else {
 
-			tColor = 0xFA2720;
-			bColor = 0x421E22;
+			tColor = 0x000000;
+			bColor = 0x00133E;
 
 			exp = 1.0;
 
