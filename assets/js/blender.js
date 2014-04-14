@@ -71,7 +71,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		var light4 = new THREE.PointLight(0xFFFFFF, 0.5);
 		light4.position.set(-120,100,0);
 		scene.add(light4);
-		
+
 
 		//Collada loader script to bring in .dae model file
 		var loader = new THREE.ColladaLoader();
@@ -240,4 +240,22 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     //function to replace target char in string
     function char_replace (s, index, character) {
         return (s.substr(0, index) + character + s.substr(index+character.length));
+    }
+
+    //create party lights
+    var tmp_light;
+    function party_lights() {
+    	var tmp, party_color = "0x000000";
+
+    	scene.remove(tmp_light);
+
+    	for (var i=0; i<6; i++) {
+    		tmp = Math.floor( (Math.random()*10)+6 );
+    		tmp = slider_to_hex(tmp);
+    		party_color = char_replace(party_color, i+2, tmp);
+    	}
+
+		tmp_light = new THREE.PointLight(party_color, 0.7);
+		tmp_light.position.set(-100,200,100);
+		scene.add(tmp_light)
     }

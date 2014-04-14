@@ -100,6 +100,8 @@
     </audio>
 
     <script>
+        var music = false;
+
         // Initialize event handlers
 
         //toggle axes and grid
@@ -115,8 +117,17 @@
             changeSky();
         };
         //toggle party effects
+        var p_light;
         document.getElementById("party").onclick = function () {
-            document.getElementById("music").play();
+            if (!music) {
+                document.getElementById("music").play();
+                p_light = setInterval(party_lights(), 500);
+                music = true;
+            } else {
+                document.getElementById("music").pause();
+                music = false;
+                clearInterval(p_light);
+            }
         };
 
         //update lights on slide and click release from user
