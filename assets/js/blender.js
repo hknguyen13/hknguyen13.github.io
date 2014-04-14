@@ -85,12 +85,12 @@ var s_color = "0x0F0F0F";
 			scene.add(dae);
 
 			//axes and grid code
-			axes = new THREE.AxisHelper(50);
+			/*axes = new THREE.AxisHelper(50);
 			axes.position = dae.position;
 
 			gridXZ = new THREE.GridHelper(100, 10);
 			gridXZ.setColors( new THREE.Color(0xFFC0CB), new THREE.Color(0x8f8f8f) );
-			gridXZ.position.set(0,0,0 );
+			gridXZ.position.set(0,0,0 );*/
 
 			//addHelpers();
 		});
