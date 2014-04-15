@@ -260,12 +260,6 @@ var tmp_light;
 		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
 		tmp_light.position.set(-250,50,0);
 		scene.add(tmp_light);
-
-		party_color = random_num();
-
-		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
-		tmp_light.position.set(250,50,0);
-		scene.add(tmp_light);
     }
 
     //generate random num between 0 and 15
