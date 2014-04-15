@@ -75,7 +75,7 @@ var tmp_light;
 
 		//party light
 		tmp_light = new THREE.PointLight(0x000001, 0.8);
-		light.position.set(-100,200,100);
+		tmp_light.position.set(-100,200,100);
 		scene.add(tmp_light);
 
 
@@ -269,6 +269,6 @@ var tmp_light;
 		console.log("where's the party");
 
 		tmp_light = new THREE.PointLight(0xff0000, 0.8);
-		tmp_light2.position.set(-200,100,-50);
+		tmp_light.position.set(-200,100,-50);
 		scene.add(tmp_light);
     }
