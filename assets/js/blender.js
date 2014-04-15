@@ -259,6 +259,6 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     	}
 
 		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
-		tmp_light.position.set(x,y,z);
+		tmp_light.position.set(-250,40,0);
 		scene.add(tmp_light);
     }
