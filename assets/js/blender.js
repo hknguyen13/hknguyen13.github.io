@@ -44,9 +44,9 @@ var tmp_light2;
       //add lights to the scene and spheres to help with positioning
 
       	//light 1
-		light = new THREE.PointLight(0xfffff3, 0.8);
-		light.position.set(-100,200,100);
-		scene.add(light);
+		tmp_light2 = new THREE.PointLight(0xfffff3, 0.8);
+		tmp_light2.position.set(-100,200,100);
+		scene.add(tmp_light2);
 
 		var sphereSize = 2; 
 		var pointLightHelper = new THREE.PointLightHelper( light, sphereSize ); 
@@ -74,9 +74,9 @@ var tmp_light2;
 		scene.add(light4);
 
 		//party light
-		var tmp_light2 = new THREE.PointLight(0x000000, 0.5);
+		/*var tmp_light2 = new THREE.PointLight(0x000000, 0.5);
 		tmp_light2.position.set(-120,100,0);
-		scene.add(tmp_light2);
+		scene.add(tmp_light2);*/
 
 
 		//Collada loader script to bring in .dae model file
