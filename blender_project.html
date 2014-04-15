@@ -121,7 +121,7 @@
         document.getElementById("party").onclick = function () {
             if (!music) {
                 //document.getElementById("music").play();
-                p_light = setInterval( function() { party_lights(-250,40,0); }, 200 );
+                p_light = setInterval( function() { party_lights(-250,40,0); }, 1000 );
                 music = true;
             } else {
                 document.getElementById("music").pause();
