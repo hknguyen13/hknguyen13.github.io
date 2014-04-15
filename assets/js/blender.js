@@ -243,7 +243,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     }
 
     //create party lights
-    var tmp_light;
+    var tmp_light, tmp_light2;
     function party_lights(x, y, z) {
 
     	console.log("where's the party");
@@ -261,4 +261,8 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
 		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
 		tmp_light.position.set(-250,50,0);
 		scene.add(tmp_light);
+
+		tmp_light2 = new THREE.PointLight(0xff0ff3, 0.8);
+		tmp_light2.position.set(-200,100,-50);
+		scene.add(tmp_light2);
     }
