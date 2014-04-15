@@ -49,7 +49,7 @@ var tmp_light2;
 		scene.add(tmp_light2);
 
 		var sphereSize = 2; 
-		var pointLightHelper = new THREE.PointLightHelper( light, sphereSize ); 
+		var pointLightHelper = new THREE.PointLightHelper( tmp_light2, sphereSize ); 
 		scene.add( pointLightHelper );
 
 		//light 2
