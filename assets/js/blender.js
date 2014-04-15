@@ -251,6 +251,10 @@ var tmp_light;
     //create party lights
     function party_lights(x, y, z) {
 
+		tmp_light = new THREE.PointLight(0xff0000, 0.8);
+		tmp_light.position.set(-250,60,0);
+		scene.add(tmp_light);
+
     	/*var tmp, party_color = "0x000000";
 
     	//scene.remove(tmp_light);
@@ -267,8 +271,4 @@ var tmp_light;
 		scene.add(tmp_light);*/
 
 		console.log("where's the party");
-
-		tmp_light = new THREE.PointLight(0xff0000, 0.8);
-		tmp_light.position.set(-200,100,-50);
-		scene.add(tmp_light);
     }
