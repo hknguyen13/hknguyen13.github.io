@@ -258,7 +258,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     		party_color = char_replace(party_color, (i+2), tmp);
     	}
 
-		tmp_light = new THREE.PointLight(party_color, 0.7);
+		tmp_light = new THREE.PointLight(parseInt(party_color), 0.7);
 		tmp_light.position.set(-100,200,100);
 		scene.add(tmp_light)
     }
