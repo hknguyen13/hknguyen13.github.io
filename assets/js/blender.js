@@ -4,7 +4,7 @@ var axes_grids = false;
 var day = false;
 var sky, light, light2, light3;
 var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
-var tmp_light;
+var tmp_light, tmp_light2;
 
     init();
     animate();
@@ -73,10 +73,14 @@ var tmp_light;
 		light4.position.set(-120,100,0);
 		scene.add(light4);
 
-		//party light
+		//party lights
 		tmp_light = new THREE.PointLight(0x000001, 0.8);
 		tmp_light.position.set(-100,200,100);
 		scene.add(tmp_light);
+
+		tmp_light2 = new THREE.PointLight(0x000001, 0.8);
+		tmp_light2.position.set(-100,200,100);
+		scene.add(tmp_light2);
 
 
 		//Collada loader script to bring in .dae model file
@@ -249,17 +253,24 @@ var tmp_light;
     }
 
     //create party lights
-    function party_lights(x, y, z) {
+    function party_lights() {
 
     	var party_color
 
   		scene.remove(tmp_light);
+  		scene.remove(tmp_light2);
 
     	party_color = random_num();
 
 		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
 		tmp_light.position.set(-250,50,0);
 		scene.add(tmp_light);
+
+		party_color = random_num();
+
+		tmp_light2 = new THREE.PointLight(parseInt(party_color), 1.0);
+		tmp_light2.position.set(200,50,-50);
+		scene.add(tmp_light2);
     }
 
     //generate random num between 0 and 15
