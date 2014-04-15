@@ -152,6 +152,7 @@ margin-top: 10em;
     -webkit-box-shadow: none;
 }
 #blender_proj .button_container button {
+    font-size: 1.4em;
     margin: 10px 7%;
     width: 145px;
     border-radius: 5px;
