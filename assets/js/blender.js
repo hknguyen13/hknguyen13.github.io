@@ -249,29 +249,35 @@ var tmp_light;
     }
 
     //create party lights
-    var tmp_light;
     function party_lights(x, y, z) {
 
-  			scene.remove(tmp_light);
+    	var party_color
 
-  			/*tmp_light = new THREE.PointLight(0xff0000, 0.7);
-			tmp_light.position.set(-100,200,100);
-			scene.add(tmp_light);*/
+  		scene.remove(tmp_light);
 
-    	var tmp, party_color = "0x000000";
-
-    	//scene.remove(tmp_light);
-
-    	for (var i=0; i<6; i++) {
-    		tmp = (Math.floor( (Math.random()*10)+6 )).toString();
-    		tmp = slider_to_hex(tmp);
-
-    		party_color = char_replace(party_color, (i+2), tmp);
-    	}
+    	party_color = random_num();
 
 		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
 		tmp_light.position.set(-250,50,0);
 		scene.add(tmp_light);
 
-		console.log("where's the party");
+		party_color = random_num();
+
+		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
+		tmp_light.position.set(250,50,0);
+		scene.add(tmp_light);
+    }
+
+    //generate random num between 0 and 15
+    function random_num() {
+    	var tmp, party_color = "0x000000";
+
+    	for (var i=0; i<6; i++) {
+    		tmp = (Math.round( (Math.random()*15) )).toString();
+    		tmp = slider_to_hex(tmp);
+
+    		party_color = char_replace(party_color, (i+2), tmp);
+    	}
+
+    	return party_color;
     }
