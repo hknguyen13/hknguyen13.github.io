@@ -247,11 +247,11 @@ var tmp_light2;
     var tmp_light;
     function party_lights(x, y, z) {
 
-  			scene.remove(light);
+  			scene.remove(tmp_light2);
 
-  			light = new THREE.PointLight(0xff0000, 0.7);
-			light.position.set(-100,200,100);
-			scene.add(light);
+  			tmp_light2 = new THREE.PointLight(0xff0000, 0.7);
+			tmp_light2.position.set(-100,200,100);
+			scene.add(tmp_light2);
 
     	/*var tmp, party_color = "0x000000";
 
