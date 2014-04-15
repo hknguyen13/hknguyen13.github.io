@@ -243,12 +243,11 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     }
 
     //create party lights
-    function party_lights(light, x, y, z) {
+    var tmp_light;
+    function party_lights(x, y, z) {
 
     	console.log("where's the party");
     	var tmp, party_color = "0x000000";
-
-    	tmp_light = light;
 
     	scene.remove(tmp_light);
 
