@@ -243,10 +243,9 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     }
 
     //create party lights
-    var tmp_light;
-    function party_lights() {
+    function party_lights(tmp_light, x, y, z) {
 
-    	console.log("where's the party?");
+    	console.log("where's the party");
     	var tmp, party_color = "0x000000";
 
     	scene.remove(tmp_light);
@@ -258,7 +257,7 @@ var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
     		party_color = char_replace(party_color, (i+2), tmp);
     	}
 
-		tmp_light = new THREE.PointLight(parseInt(party_color), 0.7);
-		tmp_light.position.set(-100,200,100);
+		tmp_light = new THREE.PointLight(parseInt(party_color), 1.0);
+		tmp_light.position.set(x,y,z);
 		scene.add(tmp_light)
     }
