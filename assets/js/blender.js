@@ -74,9 +74,9 @@ var tmp_light2;
 		scene.add(light4);
 
 		//party light
-		/*tmp_light2 = new THREE.PointLight(0xfffff3, 0.8);
+		tmp_light2 = new THREE.PointLight(0x000001, 0.8);
 		light.position.set(-100,200,100);
-		scene.add(tmp_light2);*/
+		scene.add(tmp_light2);*
 
 
 		//Collada loader script to bring in .dae model file
