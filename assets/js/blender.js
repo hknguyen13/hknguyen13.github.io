@@ -4,7 +4,7 @@ var axes_grids = false;
 var day = false;
 var sky, light, light2, light3;
 var s_color = "0x0F0F0F", s_color2 = "0x0F0F0F", s_color3 = "0x0F0F0F";
-var tmp_light2;
+var tmp_light;
 
     init();
     animate();
@@ -74,9 +74,9 @@ var tmp_light2;
 		scene.add(light4);
 
 		//party light
-		tmp_light2 = new THREE.PointLight(0x000001, 0.8);
-		tmp_light2.position.set(-100,200,100);
-		scene.add(tmp_light2);
+		tmp_light = new THREE.PointLight(0x000001, 0.8);
+		tmp_light.position.set(-100,200,100);
+		scene.add(tmp_light);
 
 
 		//Collada loader script to bring in .dae model file
@@ -249,11 +249,14 @@ var tmp_light2;
     }
 
     //create party lights
+    var tmp_light;
     function party_lights(x, y, z) {
 
-		tmp_light2 = new THREE.PointLight(0xff0000, 0.8);
-		tmp_light2.position.set(-250,60,0);
-		scene.add(tmp_light2);
+  			scene.remove(tmp_light);
+
+  			tmp_light = new THREE.PointLight(0xff0000, 0.7);
+			tmp_light.position.set(-100,200,100);
+			scene.add(tmp_light);
 
     	/*var tmp, party_color = "0x000000";
 
@@ -271,4 +274,8 @@ var tmp_light2;
 		scene.add(tmp_light);*/
 
 		console.log("where's the party");
+
+		/*tmp_light2 = new THREE.PointLight(0xff0000, 0.8);
+		tmp_light2.position.set(-200,100,-50);
+		scene.add(tmp_light2);*/
     }
